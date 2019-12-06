@@ -10,7 +10,7 @@ body {
 
 .bottom {
     position: fixed;
-    top: 0;
+    bottom: 0;
     left: 0;
     right: 0;
     display: flex;
@@ -23,8 +23,9 @@ body {
     padding: 1rem;
     flex: 1;
     text-align: center;
-    background: none;
     cursor: pointer;
+    background-color: lightblue;
+    z-index: 1;
 }
 
 .color {
@@ -39,9 +40,9 @@ body {
 
 .sub {
     position: absolute;
-    top: 3rem;
+    bottom: 3rem;
     left: 0;
-    /*color: darkgoldenrod;*/
+    width: 25%;
 }
 
 .sub.none {
@@ -55,7 +56,12 @@ body {
 }
 
 .sub ul li button {
-    background: none;
     border: 1px solid darkgreen;
     cursor: pointer;
+    width: 100%;
+    padding: 1rem;
+    background-color: brown;
+    color: #fff;
+    font-weight: bold;
+    border-top: 1px solid brown;
 }

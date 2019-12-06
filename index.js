@@ -9,7 +9,12 @@ let pink = document.getElementById('pink');
 let black = document.getElementById('black');
 let sub = document.getElementById('sub');
 
-// old ******************************
+window.addEventListener('click', e => {
+    if (e.target.id !== 'red') {
+        sub.classList.add('none');
+    }
+});
+
 
 let start, end, interval, intervalCounter = 0;
 
@@ -19,13 +24,13 @@ red.addEventListener('mousedown', e => {
 
     interval = setInterval(() => {
         intervalCounter++;
-        if (intervalCounter >= 1) {
+        if (intervalCounter >= 0.5) {
             console.log('>= 2');
             sub.classList.remove('none');
             clearInterval(interval);
         }
 
-    }, 1000);
+    }, 500);
 });
 
 red.addEventListener('mouseup', e => {
@@ -39,26 +44,11 @@ red.addEventListener('mouseup', e => {
     const Seconds_Between_Dates = Math.abs(Seconds_from_T1_to_T2);
     console.log(Seconds_Between_Dates);
 
-    if (Seconds_Between_Dates < 1) {
+    if (Seconds_Between_Dates < 0.5) {
         color.style.backgroundColor = 'red';
     }
 
 });
-
-
-// new *****************************
-
-let inVal, counter = 0;
-
-// red.addEventListener('mousedown', () => {
-//     inVal = setInterval(() => {
-//         counter++;
-//         if (counter >= 2) {
-//             console.log('counter > 2');
-//         }
-//     }, 1000);
-//
-// });
 
 
 blue.addEventListener('click', e => {
@@ -85,3 +75,4 @@ black.addEventListener('click', e => {
     color.style.backgroundColor = 'black';
     sub.classList.add('none');
 });
+
